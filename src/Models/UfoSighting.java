@@ -1,17 +1,22 @@
+package Models;
+
+import Utilities.DatabaseUtility;
+
+import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.List;
+import java.time.LocalDateTime;
+
 
 public class UfoSighting {
     private int sightingID; //Primary key
     private int durationSec;
-    private LocalDate dateTime;
+    private LocalDate sightingDate;
     private String city, state, country, ufoShape, reportDetails;
-    private Float latitude, longitude;
+    private double latitude, longitude;
 
-    public UfoSighting(int durationSec, LocalDate dateTime, String city, String state, String country, String ufoShape, String reportDetails, Float latitude, Float longitude) {
+    public UfoSighting(int durationSec, LocalDate sightingDate, String city, String state, String country, String ufoShape, String reportDetails, double latitude, double longitude) {
         setDurationSec(durationSec);
-        setDateTime(dateTime);
+        setSightingDate(sightingDate);
         setCity(city);
         setState(state);
         setCountry(country);
@@ -19,8 +24,13 @@ public class UfoSighting {
         setReportDetails(reportDetails);
         setLatitude(latitude);
         setLongitude(longitude);
-        //int sightingID = DatabaseUtility.insertRecord();
-        //setSightingID(sightingID);
+        try {
+            int sightingID = DatabaseUtility.insertNewSighting(this);
+            setSightingID(sightingID);
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
     }
 
     public int getSightingID() {
@@ -43,13 +53,13 @@ public class UfoSighting {
         else throw new IllegalArgumentException("Duration must be greater than 0 seconds");
     }
 
-    public LocalDate getDateTime() {
-        return dateTime;
+    public LocalDate getSightingDate() {
+        return sightingDate;
     }
 
-    public void setDateTime(LocalDate dateTime) {
-        if (dateTime.isBefore(LocalDate.now())||dateTime.isEqual(LocalDate.now()))
-            this.dateTime = dateTime;
+    public void setSightingDate(LocalDate sightingDate) {
+        if (sightingDate.isBefore(LocalDate.now()) || sightingDate.isEqual(LocalDate.now()))
+            this.sightingDate = sightingDate;
         else throw new IllegalArgumentException("DateTime must be before the current time and date.");
     }
 
@@ -98,26 +108,26 @@ public class UfoSighting {
     }
 
     public void setReportDetails(String reportDetails) {
-        if (reportDetails.isBlank())
+        if (!reportDetails.isBlank())
             this.reportDetails = reportDetails;
         else throw new IllegalArgumentException("Report details cannot be blank");
     }
 
-    public Float getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Float latitude) {
+    public void setLatitude(double latitude) {
         if (latitude<=90 && latitude>=-90)
             this.latitude = latitude;
         else throw new IllegalArgumentException("Latitude must be between 90 and -90.");
     }
 
-    public Float getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Float longitude) {
+    public void setLongitude(double longitude) {
         if (longitude<=80 && longitude>=-180)
             this.longitude = longitude;
         else throw new IllegalArgumentException("Longitude must be between 80 and -180.");
