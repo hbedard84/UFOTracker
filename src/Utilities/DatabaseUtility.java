@@ -1,60 +1,104 @@
 package Utilities;
 
+import java.io.File;
 import java.sql.*;
+import java.util.ArrayList;
+
 import Models.UfoSighting;
 
 
 public class DatabaseUtility {
     private static String user = "root";
     private static String password = "password1234";
+    private static String dbURL = "jdbc:mysql://localhost:3306/COMP1011Java";
 
     /***
      * This method receives a new UFOSighting object, adds it to the database and returns the id
      * @param newUfoSighting
      * @return the sightingID primary key from database
      */
-    public static int insertNewSighting (UfoSighting newUfoSighting) throws SQLException {
+    public static int insertNewSighting(UfoSighting newUfoSighting) throws SQLException {
         Connection conn = null;
         PreparedStatement ps = null;
         int sightingID = -1;
 
-        try{
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/COMP1011Java", user, password);
+        try {
+            conn = DriverManager.getConnection(dbURL, user, password);
 
-            String sql = "INSERT INTO ufoSightings (sightingDate, city, state, country, " +
-                    "latitude, longitude, durationSec, ufoShape, reportDetails) VALUES (?,?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO ufoSightings (city, state, country, " +
+                    "latitude, longitude, durationSec, ufoShape) VALUES (?,?,?,?,?,?,?)";
 
-            ps = conn.prepareStatement(sql, new String[] {"sightingID"});
+            ps = conn.prepareStatement(sql, new String[]{"sightingID"});
 
-            ps.setDate(1, Date.valueOf(newUfoSighting.getSightingDate()));
-            ps.setString(2,newUfoSighting.getCity());
-            ps.setString(3,newUfoSighting.getState());
-            ps.setString(4,newUfoSighting.getCountry());
-            ps.setDouble(5,newUfoSighting.getLatitude());
-            ps.setDouble(6,newUfoSighting.getLongitude());
-            ps.setInt(7,newUfoSighting.getDurationSec());
-            ps.setString(8,newUfoSighting.getUfoShape());
-            ps.setString(9,newUfoSighting.getReportDetails());
+            ps.setString(1, newUfoSighting.getCity());
+            ps.setString(2, newUfoSighting.getState());
+            ps.setString(3, newUfoSighting.getCountry());
+            ps.setDouble(4, newUfoSighting.getLatitude());
+            ps.setDouble(5, newUfoSighting.getLongitude());
+            ps.setInt(6, newUfoSighting.getDurationSec());
+            ps.setString(7, newUfoSighting.getUfoShape());
 
             ps.executeUpdate();
 
             ResultSet rs = ps.getGeneratedKeys();
 
-            while (rs.next()){
+            while (rs.next()) {
                 sightingID = rs.getInt(1);
             }
 
-        }catch(SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
-        }
-        finally {
+        } finally {
             if (conn != null)
                 conn.close();
             if (ps != null)
                 ps.close();
             return sightingID;
         }
+    }
 
 
+    public static ArrayList<UfoSighting> getAllSightings() throws SQLException {
+        ArrayList<UfoSighting> ufos = new ArrayList<>();
+        Connection conn = null;
+        Statement statement = null;
+        ResultSet resultSet = null;
+
+        try {
+            //1. connect to the DB
+            conn = DriverManager.getConnection(dbURL, user, password);
+
+            //2. create a statement object
+            statement = conn.createStatement();
+
+            //3. create/execute the sql query
+            resultSet = statement.executeQuery("SELECT * FROM ufoSightings");
+
+            //4. loop over the results
+            while (resultSet.next()) {
+                UfoSighting newUfo = new UfoSighting(
+
+                        resultSet.getInt("durationSec"),
+                        resultSet.getString("city"),
+                        resultSet.getString("state"),
+                        resultSet.getString("country"),
+                        resultSet.getString("ufoShape"),
+                        resultSet.getDouble("latitude"),
+                        resultSet.getDouble("longitude")
+                );
+                ufos.add(newUfo);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (conn != null)
+                conn.close();
+            if (statement != null)
+                statement.close();
+            if (resultSet != null)
+                resultSet.close();
+            return ufos;
+
+        }
     }
 }
