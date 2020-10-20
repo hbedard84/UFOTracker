@@ -12,6 +12,10 @@ public class DatabaseUtility {
     private static String password = "password1234";
     private static String dbURL = "jdbc:mysql://localhost:3306/COMP1011Java";
 
+    /*The data used in this application was obtained from a dataset modified from the
+    National UFO Reporting Center, sourced from https://www.kaggle.com/NUFORC/ufo-sightings
+     */
+
     /***
      * This method receives a new UFOSighting object, adds it to the database and returns the id
      * @param newUfoSighting
@@ -54,7 +58,11 @@ public class DatabaseUtility {
         }
     }
 
-
+    /***
+     * This method retrieves all the records from the ufoSightings database and stores them in an arrayList
+     * @return arrayList ufos of all ufo records
+     * @throws SQLException
+     */
     public static ArrayList<UfoSighting> getAllSightings() throws SQLException {
         ArrayList<UfoSighting> ufos = new ArrayList<>();
         Connection conn = null;

@@ -95,6 +95,10 @@ public class UfoSighting {
         else throw new IllegalArgumentException("Shape cannot be blank");
     }
 
+    /***
+     * toString method formatting the reported details of each UFO sighting
+     * @return String with details of each UFO sighting
+     */
     public String toString(){
         return String.format("UFO# %d: %s ufo sighted in %s,%s, %s.",getSightingID(), getUfoShape(),getCity(),getState(),getCountry());
     }
