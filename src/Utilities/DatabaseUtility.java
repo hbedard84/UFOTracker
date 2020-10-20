@@ -21,22 +21,19 @@ public class DatabaseUtility {
         Connection conn = null;
         PreparedStatement ps = null;
         int sightingID = -1;
-
+        
         try {
             conn = DriverManager.getConnection(dbURL, user, password);
 
-            String sql = "INSERT INTO ufoSightings (city, state, country, " +
-                    "latitude, longitude, durationSec, ufoShape) VALUES (?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO ufoSightings (city, state, country, durationSec, ufoShape) VALUES (?,?,?,?,?)";
 
             ps = conn.prepareStatement(sql, new String[]{"sightingID"});
 
             ps.setString(1, newUfoSighting.getCity());
             ps.setString(2, newUfoSighting.getState());
             ps.setString(3, newUfoSighting.getCountry());
-            ps.setDouble(4, newUfoSighting.getLatitude());
-            ps.setDouble(5, newUfoSighting.getLongitude());
-            ps.setInt(6, newUfoSighting.getDurationSec());
-            ps.setString(7, newUfoSighting.getUfoShape());
+            ps.setInt(4, newUfoSighting.getDurationSec());
+            ps.setString(5, newUfoSighting.getUfoShape());
 
             ps.executeUpdate();
 
@@ -77,20 +74,22 @@ public class DatabaseUtility {
             //4. loop over the results
             while (resultSet.next()) {
                 UfoSighting newUfo = new UfoSighting(
-
                         resultSet.getInt("durationSec"),
                         resultSet.getString("city"),
                         resultSet.getString("state"),
                         resultSet.getString("country"),
-                        resultSet.getString("ufoShape"),
-                        resultSet.getDouble("latitude"),
-                        resultSet.getDouble("longitude")
+                        resultSet.getString("ufoShape")
                 );
                 ufos.add(newUfo);
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
+        } catch (IllegalArgumentException illegalArg){
+            System.out.println(illegalArg.getMessage());
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+        finally {
             if (conn != null)
                 conn.close();
             if (statement != null)
