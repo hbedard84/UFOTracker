@@ -29,7 +29,7 @@ public class DatabaseUtility {
         try {
             conn = DriverManager.getConnection(dbURL, user, password);
 
-            String sql = "INSERT INTO ufoSightings (city, state, country, durationSec, ufoShape) VALUES (?,?,?,?,?)";
+            String sql = "INSERT INTO allUfoSightings (city, state, country, durationSec, ufoShape) VALUES (?,?,?,?,?)";
 
             ps = conn.prepareStatement(sql, new String[]{"sightingID"});
 
@@ -77,11 +77,13 @@ public class DatabaseUtility {
             statement = conn.createStatement();
 
             //3. create/execute the sql query
-            resultSet = statement.executeQuery("SELECT * FROM ufoSightings");
+            resultSet = statement.executeQuery("SELECT * FROM allUfoSightings");
+
 
             //4. loop over the results
             while (resultSet.next()) {
                 UfoSighting newUfo = new UfoSighting(
+                        resultSet.getInt("sightingID"),
                         resultSet.getInt("durationSec"),
                         resultSet.getString("city"),
                         resultSet.getString("state"),
@@ -105,7 +107,6 @@ public class DatabaseUtility {
             if (resultSet != null)
                 resultSet.close();
             return ufos;
-
         }
     }
 }

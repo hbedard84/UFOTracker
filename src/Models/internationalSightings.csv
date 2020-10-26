@@ -1,0 +1,275 @@
+sightingID,city,state,country,durationSec,ufoShape
+3,"chester (uk/england)",n/a,gb,20,circle
+7,"penarth (uk/wales)",n/a,gb,180,circle
+19,"bermuda nas",n/a,intl,20,light
+21,"cardiff (uk/wales)",n/a,gb,1200,disk
+25,"stoke mandeville (uk/england)",n/a,gb,3,cigar
+36,"gisborne (new zealand)",n/a,intl,120,disk
+40,"leeds (uk/england)",n/a,gb,600,triangle
+56,"zlatoust (russia)",n/a,intl,1200,sphere
+66,"lake macquarie (nsw&#44 australia)",n/a,intl,300,light
+104,"sydney (nsw&#44 australia)",n/a,au,180,formation
+113,"adelaide (pt. wakefield) (south australia)",n/a,au,600,circle
+126,"bickerton (near wetherby) (uk/england)",n/a,intl,2700,unknown
+137,"kedainiai (lithuania)",n/a,intl,240,oval
+149,"newtown (uk/wales)",n/a,gb,360,formation
+162,"plymouth (devonshire) (uk/england)",n/a,gb,120,formation
+185,"stord (norway)",n/a,intl,600,light
+235,"epsom (surrey) (uk/england)",n/a,gb,300,oval
+286,"alice springs  (nt&#44 australia)",n/a,au,20,unknown
+297,"hafnarfjordur (iceland)",n/a,intl,300,sphere
+322,"london (uk/england)",n/a,gb,3,diamond
+325,"dolgellau (uk/wales)",n/a,gb,240,changing
+353,"nuevo laredo (mexico)",n/a,intl,1200,light
+361,"cannock (uk/england)",n/a,gb,180,formation
+375,"rotherham (south yorkshire) (uk/england)",n/a,gb,3600,oval
+385,"kidlington (uk/england)",n/a,gb,5,formation
+393,"brassall (australia)",n/a,intl,3600,unknown
+397,"london (uk/england)",n/a,gb,300,unknown
+398,"klagenfurt (austria)",n/a,intl,60,chevron
+402,"bellmere (australia)",n/a,intl,240,cylinder
+481,"fukuoka (japan)",n/a,intl,1200,disk
+509,"viet nam",n/a,intl,600,light
+516,"indian ocean (usn vessel)",n/a,intl,240,light
+533,"ankara (turkey)",n/a,intl,300,changing
+560,"birmingham (uk/england)",n/a,gb,97836000,sphere
+617,"taunton (near) (uk/england)",n/a,gb,60,light
+654,"warrington (uk/england)",n/a,gb,8,fireball
+668,"blankenberge (belgium)",n/a,intl,10,formation
+672,"yangtzee river (china)",n/a,intl,900,disk
+678,"tillicoultry (central scotland) (uk/scotland)",n/a,gb,60,triangle
+683,"healesville. victoria (australia)",n/a,intl,40,light
+694,"chulucanas-piura la vieja (peru)",n/a,intl,6312000,other
+696,"hong kong",n/a,intl,1800,formation
+713,"karavostasi (greece)",n/a,intl,60,cross
+745,"dunstable (uk/england)",n/a,gb,300,fireball
+792,"buxton (uk/england)",n/a,gb,240,light
+798,"bursa (turkey)",n/a,intl,3,teardrop
+801,iraq,n/a,intl,15,triangle
+856,"adelaide  (south australia)",n/a,au,300,oval
+870,"kuala lumpur (malaysia)",n/a,intl,300,disk
+890,"yerevan (armenia)",n/a,intl,60,unknown
+931,"carrieres sous poissy (france)",n/a,intl,180,cigar
+984,"london (uk/england)",n/a,gb,30,fireball
+988,"viet nam (jungles of)",n/a,intl,3600,other
+991,"perth (w. of; southern cross) (western australia)",n/a,au,900,fireball
+999,"melbourne (vic&#44 australia)",n/a,au,900,cigar
+1004,"poole (uk/england)",n/a,gb,60,other
+1029,"la serena (vi&ntilde;a del mar) (chile)",n/a,intl,7620,formation
+1037,"brixham&#44 devon (uk/england)",n/a,intl,600,light
+1043,"sainte-suzanne (near switzerland) (france)",n/a,intl,2,other
+1044,"cannock (uk/england)",n/a,gb,10,triangle
+1052,"australia (rural)",n/a,intl,420,other
+1054,"rotherham (uk/england)",n/a,gb,120,light
+1068,"salatiga (indonesia)",n/a,intl,22,disk
+1076,"antibes (france)",n/a,intl,2700,sphere
+1077,"&iacute;safj&ouml;r&eth;ur (iceland)",n/a,intl,900,cylinder
+1088,"gurgaon (india)",n/a,intl,420,oval
+1122,"stafford (uk/england)",n/a,gb,60,light
+1185,"varanasi (india)",n/a,intl,8,changing
+1206,"koh samui (thailand)",n/a,intl,45,circle
+1246,"east kilbride (south lanarkshire) (uk/scotland)",n/a,gb,3600,unknown
+1284,"budapest (hungary)",n/a,intl,600,oval
+1291,"guasave sinaloa",n/a,intl,480,changing
+1295,"runcorn (uk/england)",n/a,gb,90,unknown
+1309,"manchester (uk/england)",n/a,gb,30,fireball
+1326,"shropshire (uk/england)",n/a,gb,1200,light
+1333,"berlin (germany)",n/a,de,120,fireball
+1347,"kagoshima (japan)",n/a,intl,15,formation
+1348,"noida (india)",n/a,intl,120,fireball
+1357,"kirkcaldy (uk/scotland)",n/a,gb,600,circle
+1370,"whakatane (new zealand)",n/a,intl,1800,triangle
+1402,"mysore (india)",n/a,intl,10,light
+1404,"oldham (uk/england)",n/a,gb,60,oval
+1416,"benidorm (spain)",n/a,intl,660,changing
+1429,"glasgow (uk/scotland)",n/a,gb,300,circle
+1441,"seaford (uk/england)",n/a,gb,600,light
+1442,"tonbridge (uk/england)",n/a,gb,2,fireball
+1477,"kolhapur (india)",n/a,intl,3,triangle
+1497,"south eastern coast (republic of ireland)",n/a,intl,300,chevron
+1516,"kuantan (malaysia)",n/a,intl,300,sphere
+1528,"brisbane (qld&#44 australia)",n/a,au,20,oval
+1550,"cagayan de oro city (philippines)",n/a,intl,300,circle
+1555,"newcastle-upon-tyne (uk/england)",n/a,intl,4200,oval
+1575,"llanelli (uk/england)",n/a,gb,30,triangle
+1591,"argostoli (greece)",n/a,intl,5,sphere
+1598,"barquisimeto (venezuela)",n/a,intl,120,circle
+1599,"hyderabad (india)",n/a,intl,900,light
+1600,"rawalpindi (pakistan)",n/a,intl,10,unknown
+1635,"tehran (iran)",n/a,intl,3600,triangle
+1637,"northwich (uk/england)",n/a,gb,180,other
+1674,"kabul (afghanistan)",n/a,intl,300,light
+1715,"mechra bel ksire (morocco)",n/a,intl,300,unknown
+1732,"castleside (uk/england)",n/a,gb,300,cigar
+1734,"knott - end. fleetwood (uk/england)",n/a,intl,600,light
+1741,"pacific ocean (1500mi.sw of u.s.mainland)",n/a,intl,30,circle
+1750,"london (uk/england)",n/a,gb,1800,unknown
+1763,"germany (czech border)",n/a,intl,60,flash
+1851,"cheltenham (melbourne) (victoria) (australia)",n/a,au,600,circle
+1861,"london (uk/england)",n/a,gb,240,circle
+1882,"taipei city (taiwan)",n/a,intl,30,circle
+1883,"saudi arabia",n/a,intl,20,triangle
+1891,"nhlangano (swaziland)",n/a,intl,600,sphere
+1906,"bry sur marne  (near paris) (france)",n/a,intl,120,unknown
+1917,"kallangur (australia)",n/a,intl,300,fireball
+1921,"split (in former yugoslavia)",n/a,intl,15,fireball
+1949,"fort william (uk/scotland)",n/a,intl,30,unknown
+1969,"inverness (uk/scotland)",n/a,gb,180,formation
+1980,"yangtzee river (china)",n/a,intl,1800,disk
+1998,"sheffield (uk/england)",n/a,gb,120,triangle
+2000,"los americas (laguna park 1 hotel) (tenerife)",n/a,intl,45,circle
+2013,"london (uk/england)",n/a,gb,60,light
+2032,"swadlincote&#44 derbyshire (uk/england)",n/a,intl,20,circle
+2061,"darwin (nt&#44 australia)",nt,au,60,chevron
+2194,"hull (uk/england)",n/a,gb,420,disk
+2204,"pampatar-margarita island (venezuela)",n/a,intl,4,triangle
+2235,"moss (norway)",n/a,intl,60,formation
+2249,"jerusalem (israel)",n/a,intl,1800,oval
+2269,"chennai (india)",n/a,intl,30,circle
+2318,"assouan (egypt)",n/a,intl,120,triangle
+2321,"glasgow (uk/scotland)",n/a,gb,300,other
+2323,"osaka (japan)",n/a,intl,600,fireball
+2346,"northampton (uk/england)",n/a,gb,1800,light
+2379,"tokyo (japan)",n/a,intl,15,light
+2386,"leeds (uk/england)",n/a,gb,300,fireball
+2404,"selby (uk/england)",n/a,gb,240,changing
+2408,"melksham&#44 wiltshire (uk/england)",n/a,intl,120,circle
+2411,"oakham&#44 rutland (uk/england)",n/a,intl,40,light
+2433,gaia,n/a,intl,600,circle
+2458,"gold coast (australia)",n/a,au,45,egg
+2515,"melbourne (vic&#44 australia)",n/a,au,1500,cylinder
+2529,"ditcot&#44 oxordshire (uk/england)",n/a,intl,2700,circle
+2530,"south stoke&#44 goring (uk/england)",n/a,intl,7200,circle
+2533,"kracow (poland)",n/a,intl,180,egg
+2534,"vrsac (yugoslavia)",n/a,intl,7,diamond
+2539,"cape town (south africa)",n/a,intl,30,sphere
+2584,"leeds (west yorkshire) (uk/england)",n/a,gb,15,triangle
+2586,"kristiansand (norway)",n/a,intl,120,disk
+2598,"dundalk (ireland)",n/a,intl,25,other
+2600,"bracknell (uk/england)",n/a,gb,5,circle
+2604,"plymouth (uk/england)",n/a,gb,6,light
+2666,"toton&#44 nottingham (uk/england)",n/a,intl,480,sphere
+2672,"wymondham (norfolk)(uk/england)",n/a,gb,60,other
+2721,"manchester (uk/england)",n/a,gb,5,triangle
+2722,"gisborne (new zealand)",n/a,intl,1200,other
+2757,"tattonhall (uk/england)",n/a,intl,900,teardrop
+2765,uk/england,n/a,intl,60,cylinder
+2784,"gillingham (uk/england)",n/a,gb,180,light
+2789,"manchester (uk/england)",n/a,gb,60,sphere
+2802,"leuven (belgium)",n/a,intl,4,circle
+2806,"senekal (south africa)",n/a,intl,180,light
+2807,"bloemfontein (free state)",n/a,intl,60,circle
+2809,"mossel bay (south africa)",n/a,intl,600,circle
+2815,"ackworth (uk/england)",n/a,gb,120,rectangle
+2836,"cardiff (south wales) (uk/wales)",n/a,gb,3600,light
+2858,"heer (belgium)",n/a,intl,30,unknown
+2878,"los banos&#44 laguna (philippines)",n/a,intl,60,unknown
+2880,"reykjavik (iceland)",n/a,intl,5,disk
+2915,"baranduda (australia)",n/a,au,120,sphere
+2916,"wicklow (republic of ireland)",n/a,intl,180,egg
+2937,"fareham (uk/england)",n/a,gb,1,other
+2942,"colwyn bay (uk/wales&#44 north country)",n/a,gb,18000,other
+2952,"london (uk/england)",n/a,gb,180,light
+2960,"leamington spa (uk/england)",n/a,gb,1200,diamond
+2977,"puntarenas (costa rica)",n/a,intl,60,sphere
+3029,"gimhae (kimhae) (south korea)",n/a,intl,5400,disk
+3031,"blandford forum (uk/england)",n/a,gb,300,unknown
+3059,"san pedro sul (honduras)",n/a,intl,900,fireball
+3083,"koh samui (thailand)",n/a,intl,60,circle
+3090,"ramey airforce base (sac) (puerto rico)",n/a,intl,2700,oval
+3098,"fleetwood (uk/england)",n/a,gb,1200,formation
+3126,"kaunas (lithuania)",n/a,intl,3600,unknown
+3139,"grimsby (uk/england)",n/a,gb,120,egg
+3167,"scunthorpe (uk/england)",n/a,gb,10,triangle
+3172,"newport (uk/england)",n/a,gb,3,diamond
+3188,"sydney (nsw&#44 australia)",n/a,au,300,unknown
+3212,"swanley (uk/england)",n/a,intl,60,light
+3217,"castleford (uk/england)",n/a,gb,15,light
+3241,"essex (uk/england)",n/a,gb,120,other
+3283,"indian ocean",n/a,intl,300,unknown
+3295,"kiimberley (south africa)",n/a,intl,10,unknown
+3313,"varberg (sweden)",n/a,intl,35,other
+3331,cali,n/a,intl,1500,triangle
+3354,"berlin (germany)",n/a,de,1500,unknown
+3383,"aizawl&#44 mizoram (india)",n/a,intl,1800,fireball
+3390,"szczecinek (poland)",n/a,intl,3600,other
+3400,"swansea (uk/england)",n/a,gb,1800,triangle
+3401,"swansea (uk/england)",n/a,gb,600,triangle
+3437,"cesena (italy)",n/a,intl,1800,disk
+3456,"canvey island&#44 essex (uk/england)",n/a,intl,10,chevron
+3457,"weert (netherlands)",n/a,intl,60,cigar
+3459,"careyes (mexico)",n/a,intl,60,circle
+3461,"bristol (uk/england)",n/a,gb,900,light
+3475,"pilbara desert (australia)",n/a,intl,180,unknown
+3481,"hereford (uk/england)",n/a,gb,900,disk
+3541,"san jose del cabo (mexico)",n/a,intl,120,light
+3550,"durham county (uk/england)",n/a,gb,600,light
+3571,"kobe (japan)",n/a,intl,1,light
+3579,"shenzhen (china)",n/a,intl,900,light
+3596,"new delhi (india)",n/a,intl,60,other
+3620,"mitchelstown (republic of ireland)",n/a,intl,300,unknown
+3643,"ipswich (australia)",n/a,au,20,sphere
+3650,"bridlington (uk/england)",n/a,gb,900,oval
+3683,"melbourne (australia)",n/a,au,5,oval
+3699,"cheshire&#44 lymm (uk/england)",n/a,intl,300,light
+3729,"barahona (dominican republic)",n/a,intl,15,other
+3736,"klang (malaysia)",n/a,intl,900,light
+3798,"bridlington (uk/england)",n/a,gb,30,triangle
+3806,"mitchell (australia)",n/a,au,10,cylinder
+3810,"asker (norway)",n/a,intl,30,unknown
+3825,"cheltenham (uk/england)",n/a,gb,1800,fireball
+3850,"bassevelde (belgium)",n/a,intl,3600,circle
+3869,"dundee (uk/scotland)",n/a,gb,8,teardrop
+3879,"kirkby in ashfield (uk/england)",n/a,gb,300,fireball
+3889,"morden&#44 surrey (uk/england)",n/a,intl,1200,triangle
+4002,"stockholm (sweden)",n/a,intl,600,triangle
+4014,"prespa region (macedonia)",n/a,intl,180,other
+4016,"durban (south africa)",n/a,intl,1,triangle
+4018,"puerto vallarto (mexico)",n/a,intl,2700,light
+4034,"buenas aeres (argentina)",n/a,intl,45,oval
+4051,"cyprus (mediterranean sea)",n/a,intl,60,formation
+4057,"wimborne&#44 dorset (uk/england)",n/a,intl,240,sphere
+4077,"burnley  (lancashire) (uk/england)",n/a,gb,180,fireball
+4213,"tyrrhenian sea",n/a,intl,30,sphere
+4241,"rotherham (uk/england)",n/a,gb,2400,circle
+4244,"cheltenham (uk/england)",n/a,gb,600,light
+4254,"lancaster (uk/england)",n/a,gb,120,sphere
+4261,"wald (switzerland)",n/a,intl,600,other
+4285,"manchester (uk/england)",n/a,gb,900,formation
+4290,"rugby warks (uk/england)",n/a,intl,20,light
+4293,"hull (uk/england)",n/a,gb,30,triangle
+4303,"stevenage (uk/england)",n/a,gb,120,disk
+4305,"aldershot (uk/england)",n/a,gb,60,fireball
+4325,"salford (manchester) (uk/england)",n/a,gb,60,circle
+4330,"morden&#44 surrey (uk/england)",n/a,intl,600,disk
+4360,"hayward&#39s heath (uk/england)",n/a,intl,120,unknown
+4372,"dhaka (bangladesh)",n/a,intl,30,other
+4447,"sion mills (northern ireland)",n/a,intl,45,fireball
+4448,"sandals royal jamaican resort&#44 montego bay (jamaica)",n/a,intl,3,rectangle
+4479,"hamilton (uk/scotland)",n/a,gb,120,cigar
+4494,"m. fokani/hims (syria)",n/a,intl,120,sphere
+4506,"colorado (in flight to)",n/a,intl,240,other
+4510,"tokyo (japan)",n/a,intl,120,light
+4513,"paphos (cyprus)",n/a,intl,120,sphere
+4541,"san jose del cabo (baja&#44 mexico)",n/a,intl,900,fireball
+4571,"bridgend (uk/england)",n/a,gb,3600,sphere
+4610,"mexico city (mexico)",n/a,intl,300,cross
+4611,"al warqaa 1 (u.a.r.)",n/a,intl,600,light
+4614,"padang (west sumatra) (indonesia)",n/a,intl,7200,light
+4633,"brixham.devon (at sea.fishing) (uk/england)",n/a,intl,1200,sphere
+4664,"newport (uk/england)",n/a,gb,1295,oval
+4694,"birmingham (uk/england)",n/a,gb,10,sphere
+4700,"bristol (uk/england)",n/a,gb,3,other
+4721,"stoke-on-trent (uk/england)",n/a,gb,1500,sphere
+4727,"northampton (uk/england)",n/a,gb,40,fireball
+4731,"bangkok (thailand)",n/a,intl,7200,changing
+4753,"buenos aires (almagro pale&#44 belgrano) (brazil)",n/a,intl,240,disk
+4781,"new delhi (india)",n/a,intl,3600,fireball
+4831,"stoke-on-trent (uk/england)",n/a,gb,30,cylinder
+4835,"ripon&#44 north yorkshire (uk/england)",n/a,intl,10,circle
+4850,"durban (south africa)",n/a,intl,2,disk
+4853,"dundee (uk/scotland)",n/a,gb,180,cigar
+4855,"perth (western australia)",n/a,au,40,unknown
+4899,"oslo (norway)",n/a,intl,10,unknown
+4903,"lahore (punjab) (pakistan)",n/a,intl,300,triangle
+4973,"bagheria (italy)",n/a,intl,1800,changing

@@ -10,6 +10,32 @@ public class UfoSighting {
     private int durationSec;
     private String city, state, country, ufoShape;
 
+    /***
+     * This constructor is used when accessing ufos already in the database
+     * @param sightingID
+     * @param durationSec
+     * @param city
+     * @param state
+     * @param country
+     * @param ufoShape
+     */
+    public UfoSighting(int sightingID, int durationSec, String city, String state, String country, String ufoShape) {
+        setSightingID(sightingID);
+        setDurationSec(durationSec);
+        setCity(city);
+        setState(state);
+        setCountry(country);
+        setUfoShape(ufoShape);
+    }
+
+    /***
+     * This constructor is used when creating a new ufo to add to the database
+     * @param durationSec
+     * @param city
+     * @param state
+     * @param country
+     * @param ufoShape
+     */
     public UfoSighting(int durationSec, String city, String state, String country, String ufoShape) {
         setDurationSec(durationSec);
         setCity(city);
@@ -40,9 +66,7 @@ public class UfoSighting {
     }
 
     public void setDurationSec(int durationSec) {
-        if (durationSec==0)
-            this.durationSec = 0;
-        if (durationSec>0)
+        if (durationSec>=0)
             this.durationSec = durationSec;
         else throw new IllegalArgumentException("Duration must be greater than 0 seconds");
     }
@@ -97,9 +121,9 @@ public class UfoSighting {
 
     /***
      * toString method formatting the reported details of each UFO sighting
-     * @return String with details of each UFO sighting
+     * @return String with details of UFO sighting
      */
     public String toString(){
-        return String.format("UFO# %d: %s ufo sighted in %s,%s, %s.",getSightingID(), getUfoShape(),getCity(),getState(),getCountry());
+        return String.format("UFO# %d: Sighted in %s,%s, %s for %d seconds with %s shape.",getSightingID(),getCity(),getState(),getCountry(),getDurationSec(),getUfoShape());
     }
 }
