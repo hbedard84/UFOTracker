@@ -3,6 +3,7 @@ package Utilities;
 import java.io.File;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import Models.UfoSighting;
 
@@ -107,6 +108,96 @@ public class DatabaseUtility {
             if (resultSet != null)
                 resultSet.close();
             return ufos;
+        }
+    }
+
+     public static HashMap<String, Integer> getChartData() throws SQLException {
+        HashMap<String, Integer> chartHash = new HashMap<>();
+        String countryName = "";
+        int countryTotal = 0;
+        Connection conn = null;
+        Statement statementChart = null;
+        ResultSet rsChart = null;
+
+        try {
+            //1. connect to the DB
+            conn = DriverManager.getConnection(dbURL, user, password);
+
+            //2. create a statement object
+            statementChart = conn.createStatement();
+
+            //3. create/execute the sql query
+            rsChart = statementChart.executeQuery("SELECT country, COUNT(sightingID) as 'Total' FROM allUfoSightings GROUP BY country");
+
+            //4. loop thru result set to create hashmap of country/country total pairs
+
+            while (rsChart.next()) {
+
+                countryName= rsChart.getString("country");
+                countryTotal= rsChart.getInt("Total");
+
+                chartHash.put(countryName,countryTotal);
+            };
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IllegalArgumentException illegalArg){
+            System.out.println(illegalArg.getMessage());
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+        finally {
+            if (conn != null)
+                conn.close();
+            if (statementChart != null)
+                statementChart.close();
+            if (rsChart != null)
+                rsChart.close();
+            return chartHash;
+        }
+    }
+
+    public static HashMap<String, Integer> getCanadaData() throws SQLException {
+        HashMap<String, Integer> chartHash = new HashMap<>();
+        String provinceName = "";
+        int provinceTotal = 0;
+        Connection conn = null;
+        Statement statementChart = null;
+        ResultSet rsChart = null;
+
+        try {
+            //1. connect to the DB
+            conn = DriverManager.getConnection(dbURL, user, password);
+
+            //2. create a statement object
+            statementChart = conn.createStatement();
+
+            //3. create/execute the sql query
+            rsChart = statementChart.executeQuery("SELECT state, COUNT(sightingID) as 'Total' FROM allUfoSightings WHERE country = 'ca' GROUP BY state");
+
+            //4. loop thru result set to create hashmap of country/country total pairs
+
+            while (rsChart.next()) {
+
+                provinceName= rsChart.getString("state");
+                provinceTotal= rsChart.getInt("Total");
+
+                chartHash.put(provinceName,provinceTotal);
+            };
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IllegalArgumentException illegalArg){
+            System.out.println(illegalArg.getMessage());
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+        finally {
+            if (conn != null)
+                conn.close();
+            if (statementChart != null)
+                statementChart.close();
+            if (rsChart != null)
+                rsChart.close();
+            return chartHash;
         }
     }
 }
