@@ -200,4 +200,49 @@ public class DatabaseUtility {
             return chartHash;
         }
     }
+
+    public static HashMap<String, Integer> getShapeData() throws SQLException {
+        HashMap<String, Integer> shapeHash = new HashMap<>();
+        String ufoShape = "";
+        int shapeTotal = 0;
+        Connection conn = null;
+        Statement statementShape = null;
+        ResultSet rsShape = null;
+
+        try {
+            //1. connect to the DB
+            conn = DriverManager.getConnection(dbURL, user, password);
+
+            //2. create a statement object
+            statementShape = conn.createStatement();
+
+            //3. create/execute the sql query
+            rsShape = statementShape.executeQuery("SELECT ufoShape, COUNT(sightingID) as 'Total' FROM allUfoSightings GROUP BY ufoShape");
+
+            //4. loop thru result set to create hashmap of country/country total pairs
+
+            while (rsShape.next()) {
+
+                ufoShape = rsShape.getString("ufoShape");
+                shapeTotal= rsShape.getInt("Total");
+
+                shapeHash.put(ufoShape,shapeTotal);
+            };
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IllegalArgumentException illegalArg){
+            System.out.println(illegalArg.getMessage());
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+        finally {
+            if (conn != null)
+                conn.close();
+            if (statementShape != null)
+                statementShape.close();
+            if (rsShape != null)
+                rsShape.close();
+            return shapeHash;
+        }
+    }
 }
