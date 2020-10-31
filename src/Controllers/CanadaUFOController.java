@@ -13,6 +13,7 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -20,6 +21,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.ResourceBundle;
+import java.util.TreeMap;
 
 public class CanadaUFOController implements Initializable {
 
@@ -67,10 +69,14 @@ public class CanadaUFOController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         canadaSeries = new XYChart.Series();
         canadaSeries.setName("Canadian UFO Sightings");
-        xAxis.setLabel("Province");
-        yAxis.setLabel("# of Reported UFO Sightings");
 
-        HashMap<String, Integer> chartData = new HashMap<>();
+        xAxis.setLabel("Province");
+        xAxis.setTickLabelFill(Color.WHITE);
+
+        yAxis.setLabel("# of Reported Sightings");
+        yAxis.setTickLabelFill(Color.WHITE);
+
+        TreeMap<String, Integer> chartData = new TreeMap<>();
         try {
             chartData = DatabaseUtility.getCanadaData();
         } catch (SQLException throwables) {

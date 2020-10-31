@@ -1,0 +1,49 @@
+.pane {
+    -fx-background-image: url("/Images/back1.jpg");
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-background-color: CornFlowerBlue ;
+    -fx-text-fill: white;
+    -fx-border-color: silver;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+}
+
+.chart-bar {
+    -fx-bar-fill: DarkSlateBlue;
+    -fx-border-color: black;
+}
+
+.chart-plot-background {
+    -fx-background-color: white;
+    -fx-opacity: 0.3;
+
+}
+
+.axis {
+    -fx-tick-label-font-size: 1em;
+    -fx-font-size: 1.5em;
+    -fx-font-weight: bold;
+}
+
+.chart-pie-label-line {
+    -fx-stroke: white;
+    -fx-fill: white;
+}
+
+.chart-pie-label {
+    -fx-fill: white;
+    -fx-font-size: 1.5em;
+}
+.chart-legend {
+    -fx-background-color:  transparent;
+}
+
+
+
+

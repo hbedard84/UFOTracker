@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CanadaUFOController">
+<AnchorPane fx:id="pane2" prefHeight="600.0" prefWidth="800.0" styleClass="pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CanadaUFOController">
    <children>
       <VBox alignment="CENTER" layoutX="115.0" prefHeight="600.0" prefWidth="800.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -20,25 +20,37 @@
                   <Font size="36.0" />
                </font>
             </Label>
-            <BarChart fx:id="canadaBarChart" legendVisible="false" prefHeight="400.0" prefWidth="700.0">
+            <BarChart fx:id="canadaBarChart" horizontalGridLinesVisible="false" legendVisible="false" prefHeight="400.0" prefWidth="700.0" verticalGridLinesVisible="false">
               <xAxis>
-                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                <CategoryAxis side="BOTTOM" tickLabelGap="0.0" tickLabelRotation="20.0" fx:id="xAxis">
+                     <tickLabelFont>
+                        <Font size="6.0" />
+                     </tickLabelFont></CategoryAxis>
               </xAxis>
               <yAxis>
-                <NumberAxis fx:id="yAxis" side="LEFT" />
+                <NumberAxis fx:id="yAxis" side="LEFT">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></NumberAxis>
               </yAxis>
             </BarChart>
-            <HBox alignment="CENTER" spacing="30.0">
+            <HBox alignment="BOTTOM_RIGHT" spacing="10.0">
                <children>
-                  <Button fx:id="btn_intlView" mnemonicParsing="false" onAction="#changeToAllCountryView" prefHeight="50.0" prefWidth="150.0" text="View International Results" textAlignment="CENTER" wrapText="true">
+                  <Button fx:id="btn_intlView" mnemonicParsing="false" onAction="#changeToAllCountryView" prefHeight="52.0" prefWidth="150.0" text="View International Results" textAlignment="CENTER" wrapText="true">
                      <font>
-                        <Font size="14.0" />
-                     </font></Button>
-                  <Button fx:id="btn_pieChart" mnemonicParsing="false" onAction="#changeToShapesView" prefHeight="50.0" prefWidth="150.0" text="View UFOs by Shape" textAlignment="CENTER" wrapText="true">
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Button>
+                  <Button fx:id="btn_pieChart" mnemonicParsing="false" onAction="#changeToShapesView" prefHeight="52.0" prefWidth="150.0" text="View UFOs by Shape" textAlignment="CENTER" wrapText="true">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font></Button>
                </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
             </HBox>
          </children>
          <padding>

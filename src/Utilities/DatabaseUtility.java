@@ -4,6 +4,7 @@ import java.io.File;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.TreeMap;
 
 import Models.UfoSighting;
 
@@ -111,8 +112,8 @@ public class DatabaseUtility {
         }
     }
 
-     public static HashMap<String, Integer> getChartData() throws SQLException {
-        HashMap<String, Integer> chartHash = new HashMap<>();
+     public static TreeMap<String, Integer> getChartData() throws SQLException {
+        TreeMap<String, Integer> chartTree = new TreeMap<>();
         String countryName = "";
         int countryTotal = 0;
         Connection conn = null;
@@ -136,7 +137,7 @@ public class DatabaseUtility {
                 countryName= rsChart.getString("country");
                 countryTotal= rsChart.getInt("Total");
 
-                chartHash.put(countryName,countryTotal);
+                chartTree.put(countryName,countryTotal);
             };
         } catch (SQLException e) {
             e.printStackTrace();
@@ -152,12 +153,12 @@ public class DatabaseUtility {
                 statementChart.close();
             if (rsChart != null)
                 rsChart.close();
-            return chartHash;
+            return chartTree;
         }
     }
 
-    public static HashMap<String, Integer> getCanadaData() throws SQLException {
-        HashMap<String, Integer> chartHash = new HashMap<>();
+    public static TreeMap<String, Integer> getCanadaData() throws SQLException {
+        TreeMap<String, Integer> chartTree = new TreeMap<>();
         String provinceName = "";
         int provinceTotal = 0;
         Connection conn = null;
@@ -181,7 +182,7 @@ public class DatabaseUtility {
                 provinceName= rsChart.getString("state");
                 provinceTotal= rsChart.getInt("Total");
 
-                chartHash.put(provinceName,provinceTotal);
+                chartTree.put(provinceName,provinceTotal);
             };
         } catch (SQLException e) {
             e.printStackTrace();
@@ -197,7 +198,7 @@ public class DatabaseUtility {
                 statementChart.close();
             if (rsChart != null)
                 rsChart.close();
-            return chartHash;
+            return chartTree;
         }
     }
 

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PieChartUFOController">
+<AnchorPane fx:id="pane3" prefHeight="600.0" prefWidth="800.0" styleClass="pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PieChartUFOController">
    <children>
       <VBox alignment="CENTER" layoutX="150.0" layoutY="49.0" prefHeight="600.0" prefWidth="800.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -19,15 +19,15 @@
                </font>
             </Label>
             <PieChart fx:id="shapePieChart" labelLineLength="15.0" legendSide="RIGHT" prefHeight="400.0" prefWidth="700.0" startAngle="180.0" />
-            <HBox alignment="CENTER" spacing="30.0">
+            <HBox alignment="BOTTOM_RIGHT" spacing="10.0">
                <children>
-                  <Button fx:id="btn_intlView" mnemonicParsing="false" onAction="#changeToAllCountryView" prefHeight="50.0" prefWidth="150.0" text="View International Sightings Graph" textAlignment="CENTER" wrapText="true">
+                  <Button fx:id="btn_intlView" mnemonicParsing="false" onAction="#changeToAllCountryView" prefHeight="52.0" prefWidth="150.0" text="View International Sightings" textAlignment="CENTER" wrapText="true">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font></Button>
-                  <Button fx:id="btn_canada" alignment="CENTER" mnemonicParsing="false" onAction="#changeToCanadaView" prefHeight="50.0" prefWidth="150.0" text="View Canadian Sightings Graph" textAlignment="CENTER" wrapText="true">
+                  <Button fx:id="btn_canada" alignment="CENTER" mnemonicParsing="false" onAction="#changeToCanadaView" prefHeight="52.0" prefWidth="150.0" text="View Canadian Sightings" textAlignment="CENTER" wrapText="true">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="14.0" />
                      </font></Button>
                </children>
             </HBox>

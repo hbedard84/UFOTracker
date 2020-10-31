@@ -15,6 +15,7 @@ package Controllers;
         import javafx.scene.control.Button;
         import javafx.scene.control.Label;
         import javafx.scene.image.Image;
+        import javafx.scene.paint.Color;
         import javafx.stage.Stage;
 
         import java.io.IOException;
@@ -23,6 +24,7 @@ package Controllers;
         import java.util.ArrayList;
         import java.util.HashMap;
         import java.util.ResourceBundle;
+        import java.util.TreeMap;
 
 public class GraphUFOController implements Initializable {
 
@@ -73,12 +75,16 @@ public class GraphUFOController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ufoSeries = new XYChart.Series();
         ufoSeries.setName("UFO Sightings");
-        xAxis.setLabel("Country");
-        yAxis.setLabel("# of Reported UFO Sightings");
-        yAxis.setAutoRanging(false); //allows you to set a custom display range for the values
-        yAxis.setUpperBound(500); //this zooms in the chart so you can see the smaller bars better when the range is too lange
 
-        HashMap<String, Integer> chartData = new HashMap<>();
+        xAxis.setLabel("Country");
+        xAxis.setTickLabelFill(Color.WHITE);
+
+        yAxis.setLabel("# of Reported Sightings");
+        yAxis.setAutoRanging(false); //allows you to set a custom display range for the values
+        yAxis.setUpperBound(400); //this zooms in the chart so you can see the smaller bars better since the range is too large
+        yAxis.setTickLabelFill(Color.WHITE);
+
+        TreeMap<String, Integer> chartData = new TreeMap<>();
         try {
             chartData = DatabaseUtility.getChartData();
         } catch (SQLException throwables) {

@@ -11,6 +11,8 @@ CREATE TABLE IF NOT EXISTS allUfoSightings(
   ,durationSec INTEGER  NOT NULL
   ,ufoShape    VARCHAR(30) NOT NULL
 );
+
+/**This data was obtained using data modified from the National UFO Reporting Center sourced from https://www.kaggle.com/NUFORC/ufo-sightings**/
 INSERT INTO allufosightings(sightingID,city,state,country,durationSec,ufoShape) VALUES (1,'san marcos','tx','USA',2700,'cylinder');
 INSERT INTO allufosightings(sightingID,city,state,country,durationSec,ufoShape) VALUES (2,'lackland afb','tx','USA',7200,'light');
 INSERT INTO allufosightings(sightingID,city,state,country,durationSec,ufoShape) VALUES (3,'chester (uk/england)','n/a','UK',20,'circle');
