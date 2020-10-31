@@ -172,7 +172,7 @@ public class DatabaseUtility {
             statementChart = conn.createStatement();
 
             //3. create/execute the sql query
-            rsChart = statementChart.executeQuery("SELECT state, COUNT(sightingID) as 'Total' FROM allUfoSightings WHERE country = 'ca' GROUP BY state");
+            rsChart = statementChart.executeQuery("SELECT state, COUNT(sightingID) as 'Total' FROM allUfoSightings WHERE country = 'Canada' GROUP BY state");
 
             //4. loop thru result set to create hashmap of country/country total pairs
 

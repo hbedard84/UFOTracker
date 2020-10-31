@@ -14,9 +14,9 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Views/graphUFOView.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("UFO Tracker");
+        stage.setTitle("UFO Tracker - Worldwide Sightings");
         // change default icon to ufo image
-        stage.getIcons().add(new Image("Images/ufo.png"));
+        stage.getIcons().add(new Image("Images/ufoicon.png"));
         stage.setScene(scene);
         stage.show();
     }

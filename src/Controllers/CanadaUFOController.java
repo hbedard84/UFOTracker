@@ -45,7 +45,7 @@ public class CanadaUFOController implements Initializable {
         Stage stage = (Stage) ((javafx.scene.Node)event.getSource()).getScene().getWindow();
         stage.setTitle("UFO Tracker - Worldwide Sightings");
         // change default icon to ufo image
-        stage.getIcons().add(new Image("/Images/ufo.png"));
+        stage.getIcons().add(new Image("/Images/ufoicon.png"));
         stage.setScene(scene);
         stage.show();
     }
@@ -56,7 +56,7 @@ public class CanadaUFOController implements Initializable {
         Stage stage = (Stage) ((javafx.scene.Node)event.getSource()).getScene().getWindow();
         stage.setTitle("UFO Tracker - Proportions of Reported Shapes");
         // change default icon to ufo image
-        stage.getIcons().add(new Image("/Images/ufo.png"));
+        stage.getIcons().add(new Image("/Images/ufoicon.png"));
         stage.setScene(scene3);
         stage.show();
     }

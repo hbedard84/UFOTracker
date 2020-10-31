@@ -51,7 +51,7 @@ public class GraphUFOController implements Initializable {
         Stage stage = (Stage) ((javafx.scene.Node)event.getSource()).getScene().getWindow();
         stage.setTitle("UFO Tracker - Canadian Sightings");
         // change default icon to ufo image
-        stage.getIcons().add(new Image("/Images/ufo.png"));
+        stage.getIcons().add(new Image("/Images/ufoicon.png"));
         stage.setScene(scene);
         stage.show();
     }
@@ -60,9 +60,9 @@ public class GraphUFOController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getResource("/Views/pieChartUFOView.fxml"));
         Scene scene3 = new Scene(root);
         Stage stage = (Stage) ((javafx.scene.Node)event.getSource()).getScene().getWindow();
-        stage.setTitle("UFO Tracker - Proportions of Reported Shapes");
+        stage.setTitle("UFO Tracker - Reported Shapes");
         // change default icon to ufo image
-        stage.getIcons().add(new Image("/Images/ufo.png"));
+        stage.getIcons().add(new Image("/Images/ufoicon.png"));
         stage.setScene(scene3);
         stage.show();
     }
@@ -75,6 +75,8 @@ public class GraphUFOController implements Initializable {
         ufoSeries.setName("UFO Sightings");
         xAxis.setLabel("Country");
         yAxis.setLabel("# of Reported UFO Sightings");
+        yAxis.setAutoRanging(false); //allows you to set a custom display range for the values
+        yAxis.setUpperBound(500); //this zooms in the chart so you can see the smaller bars better when the range is too lange
 
         HashMap<String, Integer> chartData = new HashMap<>();
         try {

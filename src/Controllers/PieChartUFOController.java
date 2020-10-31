@@ -1,8 +1,6 @@
 package Controllers;
 
 import Utilities.DatabaseUtility;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -10,7 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.fxml.FXML;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -39,7 +36,7 @@ public class PieChartUFOController implements Initializable {
         Stage stage = (Stage) ((javafx.scene.Node)event.getSource()).getScene().getWindow();
         stage.setTitle("UFO Tracker - Worldwide Sightings");
         // change default icon to ufo image
-        stage.getIcons().add(new Image("/Images/ufo.png"));
+        stage.getIcons().add(new Image("/Images/ufoicon.png"));
         stage.setScene(scene);
         stage.show();
     }
@@ -51,7 +48,7 @@ public class PieChartUFOController implements Initializable {
         Stage stage = (Stage) ((javafx.scene.Node)event.getSource()).getScene().getWindow();
         stage.setTitle("UFO Tracker - Canadian Sightings");
         // change default icon to ufo image
-        stage.getIcons().add(new Image("/Images/ufo.png"));
+        stage.getIcons().add(new Image("/Images/ufoicon.png"));
         stage.setScene(scene);
         stage.show();
     }
