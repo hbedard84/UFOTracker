@@ -3,15 +3,12 @@ package Utilities;
 import Models.UfoSighting;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-//This utility was created using the Java File Handling chapters sourced from https://www.w3schools.com/java/java_files.asp
+//This utility was created using the Java File Handling chapters sourced from https://www.w3schools.com/java/java_files.asp to research ways to read and write to files
+
 //Run this utility to create an sql script file which can be executed to create the database required to run the main application
 public class CSVtoSQLConversionUtility {
     /***

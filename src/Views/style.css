@@ -1,57 +1,64 @@
+/*AnchorPane style*/
 .pane {
-    -fx-background-image: url("/Images/back1.jpg");
+    -fx-background-image: url("/Images/back1.jpg");     /*set stage background to image*/
+    -fx-background-repeat: no-repeat;                   /*don't repeat the image*/
 }
 
+/*Label style*/
 .label {
-    -fx-text-fill: white;
+    -fx-text-fill: white;       /*set all labels' font colour*/
 }
 
+/*Main label at top of scene style*/
 .title .text {
-    -fx-fill: white;
-    -fx-stroke: MidnightBlue;
-    -fx-stroke-width: 1px;
+    -fx-fill: white;            /*set title label font colour*/
+    -fx-stroke: MidnightBlue;   /*set label font outline colour*/
+    -fx-stroke-width: 1px;      /*set label font outline width*/
 }
 
+/*Button style*/
 .button {
-    -fx-background-color: CornFlowerBlue ;
-    -fx-text-fill: white;
-    -fx-border-color: silver;
-    -fx-border-radius: 25px;
-    -fx-background-radius: 25px;
+    -fx-background-color: CornFlowerBlue;       /*set button background colour*/
+    -fx-text-fill: white;                       /*set button font colour*/
+    -fx-border-color: silver;                   /*set button outline colour*/
+    -fx-border-radius: 25px;                    /*make button corners rounded*/
+    -fx-background-radius: 25px;                /*make button corners rounded*/
 }
 
+/*Bar-chart styles*/
 .chart-bar {
-    -fx-bar-fill: DarkSlateBlue;
-    -fx-border-color: black;
+    -fx-bar-fill: DarkSlateBlue;    /*set bar colour*/
+    -fx-border-color: black;        /*set bar outline colour*/
 }
 
 .chart-plot-background {
-    -fx-background-color: white;
-    -fx-opacity: 0.3;
+    -fx-background-color: white;    /*set graph background colour*/
+    -fx-opacity: 0.3;               /*make graph background slightly see-through*/
 }
 
 .axis {
-    -fx-tick-label-font-size: 1em;
-    -fx-font-size: 1.5em;
-    -fx-font-weight: bold;
+    -fx-tick-label-font-size: 1em;  /*set font size for the categories and numbers*/
+    -fx-font-size: 1.5em;           /*set axis label font size*/
+    -fx-font-weight: bold;          /*set axis label font weight to bold*/
 }
 
 #yAxis{
-    -fx-tick-label-fill: MidnightBlue;
+    -fx-tick-label-fill: MidnightBlue;  /*set y-axis numbers font colour to midnightblue*/
 }
 
+/*Pie-Chart Styles*/
 
 .chart-pie-label-line {
-    -fx-stroke: white;
-    -fx-fill: white;
+    -fx-stroke: white;      /*set label-line colour*/
+    -fx-fill: white;        /*set label-line endpoint colour*/
 }
 
 .chart-pie-label {
-    -fx-fill: white;
-    -fx-font-size: 1.5em;
+    -fx-fill: white;        /*set font colour for labels around pie*/
+    -fx-font-size: 1.5em;   /*set font size for labels around pie*/
 }
 .chart-legend {
-    -fx-background-color: transparent;
+    -fx-background-color: transparent;      /*set legend background to transparent*/
 }
 
 

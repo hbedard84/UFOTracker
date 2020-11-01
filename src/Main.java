@@ -22,6 +22,8 @@ public class Main extends Application {
         stage.setTitle("UFO Tracker - Worldwide Sightings");
         // change default icon to ufo image
         stage.getIcons().add(new Image("Images/ufoicon.png"));
+        //block the ability to maximize the scene
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
