@@ -86,10 +86,10 @@ public class DatabaseUtility {
             while (resultSet.next()) {
                 UfoSighting newUfo = new UfoSighting(
                         resultSet.getInt("sightingID"),
-                        resultSet.getInt("durationSec"),
                         resultSet.getString("city"),
                         resultSet.getString("state"),
                         resultSet.getString("country"),
+                        resultSet.getInt("durationSec"),
                         resultSet.getString("ufoShape")
                 );
                 ufos.add(newUfo);
@@ -112,6 +112,11 @@ public class DatabaseUtility {
         }
     }
 
+    /***
+     * This method retrieves the total ufo sightings per country from the database and stores them in an treemap
+     * @return TreeMap<country,total>
+     * @throws SQLException
+     */
      public static TreeMap<String, Integer> getChartData() throws SQLException {
         TreeMap<String, Integer> chartTree = new TreeMap<>();
         String countryName = "";
@@ -130,15 +135,15 @@ public class DatabaseUtility {
             //3. create/execute the sql query
             rsChart = statementChart.executeQuery("SELECT country, COUNT(sightingID) as 'Total' FROM allUfoSightings GROUP BY country");
 
-            //4. loop thru result set to create hashmap of country/country total pairs
+            //4. loop thru result set to create treemap of country/country total pairs
 
             while (rsChart.next()) {
 
                 countryName= rsChart.getString("country");
                 countryTotal= rsChart.getInt("Total");
 
-                chartTree.put(countryName,countryTotal);
-            };
+                chartTree.put(countryName,countryTotal);  //this will be auto sorted alphabetically by country
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (IllegalArgumentException illegalArg){
@@ -157,6 +162,11 @@ public class DatabaseUtility {
         }
     }
 
+    /***
+     * This method retrieves the total ufo sightings per province in Canada from the database and stores them in an treemap
+     * @return TreeMap<province,total>
+     * @throws SQLException
+     */
     public static TreeMap<String, Integer> getCanadaData() throws SQLException {
         TreeMap<String, Integer> chartTree = new TreeMap<>();
         String provinceName = "";
@@ -175,15 +185,15 @@ public class DatabaseUtility {
             //3. create/execute the sql query
             rsChart = statementChart.executeQuery("SELECT state, COUNT(sightingID) as 'Total' FROM allUfoSightings WHERE country = 'Canada' GROUP BY state");
 
-            //4. loop thru result set to create hashmap of country/country total pairs
+            //4. loop thru result set to create treemap of province/province total pairs
 
             while (rsChart.next()) {
 
                 provinceName= rsChart.getString("state");
                 provinceTotal= rsChart.getInt("Total");
 
-                chartTree.put(provinceName,provinceTotal);
-            };
+                chartTree.put(provinceName,provinceTotal);  //this is auto sorted by province name
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (IllegalArgumentException illegalArg){
@@ -202,6 +212,11 @@ public class DatabaseUtility {
         }
     }
 
+    /***
+     * This method retrieves all the shapes reported worldwide and a total of each shape from the database and stores them in an hashmap
+     * @return HashMap<shape,total>
+     * @throws SQLException
+     */
     public static HashMap<String, Integer> getShapeData() throws SQLException {
         HashMap<String, Integer> shapeHash = new HashMap<>();
         String ufoShape = "";
@@ -228,7 +243,7 @@ public class DatabaseUtility {
                 shapeTotal= rsShape.getInt("Total");
 
                 shapeHash.put(ufoShape,shapeTotal);
-            };
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (IllegalArgumentException illegalArg){

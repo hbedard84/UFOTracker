@@ -13,9 +13,9 @@
    <children>
       <VBox alignment="CENTER" layoutX="150.0" layoutY="49.0" prefHeight="600.0" prefWidth="800.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label prefHeight="43.0" prefWidth="360.0" text="Reported UFO Shapes">
+            <Label prefHeight="54.0" prefWidth="372.0" styleClass="title" text="Reported UFO Shapes">
                <font>
-                  <Font size="36.0" />
+                  <Font name="System Bold" size="36.0" />
                </font>
             </Label>
             <PieChart fx:id="shapePieChart" labelLineLength="15.0" legendSide="RIGHT" prefHeight="400.0" prefWidth="700.0" startAngle="180.0" />

@@ -3,6 +3,7 @@ package Models;
 import Utilities.DatabaseUtility;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 
 public class UfoSighting {
@@ -19,7 +20,7 @@ public class UfoSighting {
      * @param country
      * @param ufoShape
      */
-    public UfoSighting(int sightingID, int durationSec, String city, String state, String country, String ufoShape) {
+    public UfoSighting(int sightingID, String city, String state, String country, int durationSec, String ufoShape) {
         setSightingID(sightingID);
         setDurationSec(durationSec);
         setCity(city);
@@ -100,11 +101,24 @@ public class UfoSighting {
     }
 
     public void setCountry(String country) {
+        ArrayList<String> countries = new ArrayList<>();
+        countries.add("Canada");
+        countries.add("USA");
+        countries.add("UK");
+        countries.add("Australia");
+        countries.add("Mexico");
+        countries.add("Canada");
+        countries.add("Japan");
+        countries.add("China");
+        countries.add("India");
+        countries.add("South Africa");
         if (country == null)
             this.country = "undefined";
+        else if (!countries.contains(country))
+            this.country = "Other";
         else if (!country.isBlank())
             this.country = country;
-        else throw new IllegalArgumentException("Country cannot be blank.");
+        else throw new IllegalArgumentException("Country cannot be blank. Must be from "+countries+" or Other");
     }
 
     public String getUfoShape() {

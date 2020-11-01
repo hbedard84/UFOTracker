@@ -29,6 +29,11 @@ public class PieChartUFOController implements Initializable {
     @FXML
     private Button btn_canada;
 
+    /***
+     * This method is called when the btn_intlView button is clicked, in order to switch scenes to the Worldwide Sightings graph
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void changeToAllCountryView(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/Views/graphUFOView.fxml"));
@@ -41,6 +46,11 @@ public class PieChartUFOController implements Initializable {
         stage.show();
     }
 
+    /***
+     * This method is called when the btn_canada button is clicked, in order to switch scenes to the Canadian Sightings graph
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void changeToCanadaView(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/Views/canadaUFOView.fxml"));
@@ -78,9 +88,6 @@ public class PieChartUFOController implements Initializable {
 
         //Making the labels visible
         shapePieChart.setLabelsVisible(true);
-
-
-
     }
 
 }

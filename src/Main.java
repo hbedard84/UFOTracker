@@ -5,6 +5,9 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+/***
+ * This class launches the main UFO Tracker application
+ */
 public class Main extends Application {
     public static void main(String[] args){
         launch(args);
@@ -14,6 +17,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Views/graphUFOView.fxml"));
         Scene scene = new Scene(root);
+        //add custom css styling to scene
         scene.getStylesheets().add("Views/style.css");
         stage.setTitle("UFO Tracker - Worldwide Sightings");
         // change default icon to ufo image

@@ -46,6 +46,11 @@ public class GraphUFOController implements Initializable {
     @FXML
     private Label titleLabel;
 
+    /***
+     * This method is called when the btn_canada button is clicked, in order to switch scenes to the Canadian Sightings graph
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void changeToCanadaView(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/Views/canadaUFOView.fxml"));
@@ -58,6 +63,11 @@ public class GraphUFOController implements Initializable {
         stage.show();
     }
 
+    /***
+     * This method is called when the btn_pieChart button is clicked, in order to switch scenes to the Shapes piechart
+     * @param event
+     * @throws IOException
+     */
     @FXML void changeToShapesView(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/Views/pieChartUFOView.fxml"));
         Scene scene3 = new Scene(root);
@@ -69,53 +79,36 @@ public class GraphUFOController implements Initializable {
         stage.show();
     }
 
-    private XYChart.Series ufoSeries;
+    private XYChart.Series ufoSeries; //data series containing the worldwide sightings data
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ufoSeries = new XYChart.Series();
         ufoSeries.setName("UFO Sightings");
 
+        //settings for the country (y)axis
         xAxis.setLabel("Country");
         xAxis.setTickLabelFill(Color.WHITE);
 
+        //settings for the number(y) axis
         yAxis.setLabel("# of Reported Sightings");
         yAxis.setAutoRanging(false); //allows you to set a custom display range for the values
-        yAxis.setUpperBound(400); //this zooms in the chart so you can see the smaller bars better since the range is too large
+        yAxis.setUpperBound(400); //this zooms in the chart by only displaying data up to 400 so the smaller bars can be seen, since the default range is too large
         yAxis.setTickLabelFill(Color.WHITE);
 
+        //creating a treemap of the worldwide data from the database
         TreeMap<String, Integer> chartData = new TreeMap<>();
         try {
+            //returns the total number of sightings per country in a treemap<country,total>
             chartData = DatabaseUtility.getChartData();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
+        //populating the data for the barchart by iterating through the treemap of worldwide data retrieved from the database
         chartData.forEach((k,v) -> ufoSeries.getData().add(new XYChart.Data(k,v)));
 
+        //add the data series to the chart
         barChart.getData().addAll(ufoSeries);
-
-
-        /*
-        //get total sightings count each for canada, us and international from database and add to hashmap
-        HashMap<String, Integer> chartData = new HashMap<>();
-        try {
-            chartData.put("Canada", DatabaseUtility.getCountryTotal("ca"));
-            chartData.put("USA", DatabaseUtility.getCountryTotal("us"));
-            chartData.put("International", DatabaseUtility.getCountryTotal("intl"));
-        } catch (SQLException throwables) {
-                throwables.printStackTrace();
-        }
-        //for each country/country total pair in the hash map, add the data to the ufo series
-        chartData.forEach((k,v) -> ufoSeries.getData().add(new XYChart.Data(k,v)));
-
-        //add data to the chart
-        barChart.getData().addAll(ufoSeries);
-
-
-
-
-       // ufoSeries.getData().add(new XYChart.Data(xData,yData)); */
-
     }
 }

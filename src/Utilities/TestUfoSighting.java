@@ -1,5 +1,10 @@
+package Utilities;
+
 import Models.UfoSighting;
 
+/***
+ * This class was used to test the ufosighting constructor
+ */
 public class TestUfoSighting {
     public static void main (String[] args) {
         UfoSighting test2 = new UfoSighting(7200, "lackland afb", "tx","us","light");

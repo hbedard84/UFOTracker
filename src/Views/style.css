@@ -6,6 +6,12 @@
     -fx-text-fill: white;
 }
 
+.title .text {
+    -fx-fill: white;
+    -fx-stroke: MidnightBlue;
+    -fx-stroke-width: 1px;
+}
+
 .button {
     -fx-background-color: CornFlowerBlue ;
     -fx-text-fill: white;
@@ -22,7 +28,6 @@
 .chart-plot-background {
     -fx-background-color: white;
     -fx-opacity: 0.3;
-
 }
 
 .axis {
@@ -30,6 +35,11 @@
     -fx-font-size: 1.5em;
     -fx-font-weight: bold;
 }
+
+#yAxis{
+    -fx-tick-label-fill: MidnightBlue;
+}
+
 
 .chart-pie-label-line {
     -fx-stroke: white;
@@ -41,7 +51,7 @@
     -fx-font-size: 1.5em;
 }
 .chart-legend {
-    -fx-background-color:  transparent;
+    -fx-background-color: transparent;
 }
 
 

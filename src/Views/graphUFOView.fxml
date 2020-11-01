@@ -15,9 +15,9 @@
    <children>
       <VBox alignment="CENTER" layoutX="102.0" layoutY="-1.0" prefHeight="600.0" prefWidth="800.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="titleLabel" text="International UFO Reports">
+            <Label fx:id="titleLabel" styleClass="title" text="International UFO Reports">
                <font>
-                  <Font size="36.0" />
+                  <Font name="System Bold" size="36.0" />
                </font>
             </Label>
             <BarChart fx:id="barChart" horizontalGridLinesVisible="false" legendVisible="false" prefHeight="400.0" prefWidth="700.0" verticalGridLinesVisible="false">
@@ -25,7 +25,7 @@
                 <CategoryAxis side="BOTTOM" tickLabelRotation="20.0" fx:id="xAxis" />
               </xAxis>
               <yAxis>
-                <NumberAxis fx:id="yAxis" side="LEFT" tickUnit="100.0" />
+                <NumberAxis fx:id="yAxis" side="LEFT" tickLabelFill="#220e54" tickUnit="100.0" />
               </yAxis>
             </BarChart>
             <HBox alignment="BOTTOM_RIGHT" spacing="10.0">

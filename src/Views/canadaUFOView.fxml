@@ -15,9 +15,9 @@
    <children>
       <VBox alignment="CENTER" layoutX="115.0" prefHeight="600.0" prefWidth="800.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label prefHeight="43.0" prefWidth="360.0" text="Canadian UFO Reports">
+            <Label prefHeight="54.0" prefWidth="382.0" styleClass="title" text="Canadian UFO Reports">
                <font>
-                  <Font size="36.0" />
+                  <Font name="System Bold" size="36.0" />
                </font>
             </Label>
             <BarChart fx:id="canadaBarChart" horizontalGridLinesVisible="false" legendVisible="false" prefHeight="400.0" prefWidth="700.0" verticalGridLinesVisible="false">
